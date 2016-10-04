@@ -3,70 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>Volleyball Scrimmage</title>
-
   <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
   <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
   <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+  <script src="https://use.fontawesome.com/5a23ec9b94.js"></script>
 
 </head>
 <body>
   <h3>Players Playing This Week</h3>
   <div id="active-players"></div>
 
-  <script type="text/babel">
-
-    class Player extends React.Component {
-      render() {
-        return (
-          <div className="player" key={this.props.id}>{this.props.name} - Is {this.props.isActive ? 'Playing' : 'Not Playing'}</div>
-
-        );
-      }
-    }
-
-    class PlayerList extends React.Component {
-      render() {
-        var playerList = this.props.players.map(function(player){
-          return <Player {...player} />
-        });
-        return (
-          <div>{playerList}</div>
-        )
-
-      }
-    }
-
-    var players = [
-          { id: 1, name: 'Victor', isActive: true },
-          { id: 2,  name: 'Vivian', isActive: true },
-          { id: 3,  name: 'Mike', isActive: true },
-          { id: 4,  name: 'Michelle', isActive: false },
-          { id: 5,  name: 'John', isActive: false },
-          { id: 6,  name: 'Jane', isActive: true },
-          { id: 7,  name: 'Thomas', isActive: true },
-          { id: 8,  name: 'Trisha', isActive: true },
-          { id: 9,  name: 'Carl', isActive: true },
-          { id: 10,  name: 'Christine', isActive: true },
-          { id: 11,  name: 'Bobby', isActive: false },
-          { id: 12,  name: 'Barbara', isActive: false },
-          { id: 13,  name: 'Norman', isActive: false },
-          { id: 14,  name: 'Nancy', isActive: true },
-          { id: 15,  name: 'Steve', isActive: true },
-          { id: 16,  name: 'Sally', isActive: true }
-      ];
-
-    ReactDOM.render(
-      <PlayerList players={players} />,
-      document.getElementById('active-players')
-    );
-
-    // var playerData = { name: "Victor", isActive: false };
-    //
-    // ReactDOM.render(
-    //   <Player playerData={playerData} />,
-    //   document.getElementById('active-players')
-    // );
-
-  </script>
+  <h3>Inactive Players</h3>
+  <div id="inactive-players"></div>
+  <script src="js/application.js"></script>
 </body>
 </html>
