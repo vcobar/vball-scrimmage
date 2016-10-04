@@ -1,0 +1,39 @@
+@import "../bourbon/bourbon"
+
+#active-players,
+#inactive-players
+  width: 210px
+  @include column-count(2)
+  @include column-width(90px)
+  @include column-rule(1px solid grey)
+
+.player
+  @include border-color(lightblue)
+  @include border-top-radius(5px)
+  @include border-bottom-radius(5px)
+  @include border-style(solid)
+  padding: 10px
+  margin-bottom: 5px
+  width: 70px
+  text-align: center
+
+#inactive-players .player
+  @include border-color(#eee)
+  color: #ccc
+
+#inactive-players .player:hover
+  @include border-color(#666)
+  background-color: #e5ffe5
+  color: #000
+
+@media only screen and (min-width: 480px)
+  #active-players,
+  #inactive-players
+    width: 330px
+    @include column-count(3)
+
+@media only screen and (min-width: 768px)
+  #active-players,
+  #inactive-players
+    width: 460px
+    @include column-count(4)
