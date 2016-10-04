@@ -13,5 +13,5 @@ The user will be able to toggle a player to active/inactive by clicking an icon 
 requires [npm](https://nodejs.org/en/download/)
 
 ```
-npm Install
+npm install
 ```
