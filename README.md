@@ -1,5 +1,5 @@
 # vball-scrimmage
-Manage weekly scrimmage games with friends.  The stack will be React, SASS, ES6 for frontend, and Rails in the backend with sqlite3.  
+Manage weekly scrimmage games with friends.  The stack will be React, SASS, ES6.  With this iteration, it will be assumed there is no persistence.  
 
 ### Constraints
 Active players: 8 <= players <= 12
