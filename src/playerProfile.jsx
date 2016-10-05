@@ -3,11 +3,11 @@ var Player = require('./player');
 
 module.exports = React.createClass({
   render() {
-    var playerProfile = this.props;
+    var playerProfile =  this.props.player.map(function(player){
+      return <Player {...player} />
+    });
     return (
-      <div key={this.props.player.id}>
-        <Player {...playerProfile} />
-      </div>
+      <div key={this.props.player.id}>{playerProfile}</div>
     )
   }
 });

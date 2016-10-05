@@ -21,23 +21,26 @@ var availablePlayers = [
   ];
 
 var activePlayers = document.getElementById('active-players');
-if(activePlayers)
+if(activePlayers) {
   ReactDOM.render(
     <PlayerList players={availablePlayers.filter(function(player){ return player.isActive === true; })} />,
     activePlayers
   );
+}
 
 var inactivePlayers = document.getElementById('inactive-players');
-if(inactivePlayers)
+if(inactivePlayers) {
   ReactDOM.render(
     <PlayerList players={availablePlayers.filter(function(player){ return player.isActive === false; })} />,
     inactivePlayers
   );
+}
 
 var playerProfile = document.getElementById('player-profile');
-if(playerProfile)
+if(playerProfile) {
   var queryString = JSON.parse('{"' + decodeURI(window.location.search.substring(1)).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
   ReactDOM.render(
-    <PlayerProfile player={availablePlayers.filter(function(player){ return player.id == queryString.id })} />,
+    <PlayerProfile player={availablePlayers.filter(function(player){ return player.id == parseInt(queryString.id) })} />,
     playerProfile
   );
+}
