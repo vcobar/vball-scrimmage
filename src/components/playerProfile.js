@@ -5,21 +5,46 @@ class PlayerProfile extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { profileDisabled: true }
+    this.state                  = {};
+    this.state.profileName      = props.profile.name;
+    this.state.buttonText       = 'Edit';
+    this.state.profileDisabled  = true;
+    this.handleChange           = this.handleChange.bind(this);
+    this.handleButtonClick      = this.handleButtonClick.bind(this);
+    let disabled                = this.state.profileDisabled;
   }
 
-  render() {
-
-    var inputProperties = {
-      value: this.props.profile.name
+    handleChange(event) {
+      this.setState( {profileName: event.target.value} );
     }
+    handleButtonClick(event) {
+      this.setState({profileDisabled: !this.state.profileDisabled,
+                      buttonText: (this.state.profileDisabled) ? 'Save' : 'Edit'
+                    });
+    }
+  render() {
+    let inputProperties = {
+      type: 'text',
+      required: 'true',
+      draggable: 'true',
+      value: this.state.profileName,
+      onChange: this.handleChange,
+      onBlur: this.handleBlur
+    }
+    let profileName = <input disabled={this.state.profileDisabled} {...inputProperties} />;
+
+    let buttonProperties = {
+      onClick: this.handleButtonClick
+    }
+    let profileButton = <button {...buttonProperties}>{this.state.buttonText}</button>;
 
     return (
         <div id="player-profile">
-          <p>
-            Name:
-              <input {...inputProperties} />
-          </p>
+            <p>
+              Name:
+                {profileName}
+                {profileButton}
+            </p>
         </div>
     );
   }
