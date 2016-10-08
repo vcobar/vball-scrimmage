@@ -22,25 +22,15 @@
   width: 70px;
   text-align: center; }
 
-.player a {
-  color: #000;
-  text-decoration: none; }
+#active-players .player:hover {
+  border-color: #c4eebb;
+  background-color: #E3F8DF; }
 
-#active-players .player:hover,
-#active-players .player a:hover {
-  border-color: #666;
-  background-color: #c4eebb; }
-
-#active-players .player a:hover {
-  text-decoration: underline; }
-
-#inactive-players .player,
-#inactive-players .player a {
+#inactive-players .player {
   border-color: #eee;
   color: #ccc; }
 
-#inactive-players .player:hover,
-#inactive-players .player a:hover {
+#inactive-players .player:hover {
   border-color: #666;
   background-color: #e5ffe5;
   color: #000; }
