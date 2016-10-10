@@ -24,7 +24,8 @@
 
 #active-players .player:hover {
   border-color: #c4eebb;
-  background-color: #E3F8DF; }
+  background-color: #E3F8DF;
+  cursor: pointer; }
 
 #inactive-players .player {
   border-color: #eee;
@@ -33,7 +34,8 @@
 #inactive-players .player:hover {
   border-color: #666;
   background-color: #e5ffe5;
-  color: #000; }
+  color: #000;
+  cursor: pointer; }
 
 @media only screen and (min-width: 480px) {
   #active-players,

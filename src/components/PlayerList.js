@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import Player from './player';
+import React from 'react';
+import Player from './Player';
 
 const PlayerList = ( {players, onPlayerSelect} ) => {
 
     const playerItems = players.map( (playerInfo) => {
       return (
         <Player
-          onPlayerSelect  = {onPlayerSelect}
-          key             = {playerInfo.id}
-          playerInfo      = {playerInfo} />
+          onPlayerSelect={onPlayerSelect}
+          key={playerInfo.id}
+          playerInfo={playerInfo}
+        />
       );
     });
 

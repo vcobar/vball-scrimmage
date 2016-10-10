@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PlayerList from './playerList';
-import PlayerProfile from './playerProfile';
+import PlayerList from './PlayerList';
+import PlayerProfile from './PlayerProfile';
 
 class App extends Component {
   constructor(props) {
@@ -30,15 +30,15 @@ class App extends Component {
           <h3>Playing This Week</h3>
           <div id="active-players">
             <PlayerList
-              onPlayerSelect  = { selectedPlayerProfile => this.setState({selectedPlayerProfile}) }
-              players         = {this.state.activePlayers} />
+              onPlayerSelect={ selectedPlayerProfile => this.setState({selectedPlayerProfile}) }
+              players={this.state.activePlayers} />
           </div>
 
           <h3>Inactive Players</h3>
           <div id="inactive-players">
             <PlayerList
-              onPlayerSelect  = { selectedPlayerProfile => this.setState({selectedPlayerProfile}) }
-              players         = {this.state.inactivePlayers} />
+              onPlayerSelect={ selectedPlayerProfile => this.setState({selectedPlayerProfile}) }
+              players={this.state.inactivePlayers} />
           </div>
 
           <div className="playerProfile">

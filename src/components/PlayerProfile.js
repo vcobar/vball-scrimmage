@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
-import Player from './player';
 
 class PlayerProfile extends Component {
   constructor(props) {
     super(props);
 
-    this.state                  = {};
-    this.state.profileName      = props.profile.name;
-    this.state.buttonText       = 'Edit';
-    this.state.profileDisabled  = true;
-    this.handleChange           = this.handleChange.bind(this);
-    this.handleButtonClick      = this.handleButtonClick.bind(this);
-    let disabled                = this.state.profileDisabled;
-  }
+    this.state = { profileName: props.profile.name,
+                   buttonText: 'Edit',
+                   profileDisabled: true
+                 };
 
-    handleChange(event) {
-      this.setState( {profileName: event.target.value} );
-    }
-    handleButtonClick(event) {
-      this.setState({profileDisabled: !this.state.profileDisabled,
-                      buttonText: (this.state.profileDisabled) ? 'Save' : 'Edit'
-                    });
-    }
+    this.handleChange      = this.handleChange.bind(this);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
+  handleChange(event) {
+    this.setState( {profileName: event.target.value} );
+  }
+  handleButtonClick(event) {
+    this.setState({profileDisabled: !this.state.profileDisabled,
+                    buttonText: (this.state.profileDisabled) ? 'Save' : 'Edit'
+                  });
+  }
   render() {
     let inputProperties = {
       type: 'text',
