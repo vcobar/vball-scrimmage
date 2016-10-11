@@ -16,28 +16,23 @@
   @include size(70px auto)
   text-align: center
 
-.player a
-  color: #000
-  text-decoration: none
+#active-players .player:hover
+  @include border-color(#c4eebb)
+  background-color: #E3F8DF
+  cursor: pointer
 
-#active-players .player:hover,
-#active-players .player a:hover
-  @include border-color(#666)
-  background-color: #c4eebb
-
-#active-players .player a:hover
-  text-decoration: underline
-
-#inactive-players .player,
-#inactive-players .player a
+#inactive-players .player
   @include border-color(#eee)
   color: #ccc
 
-#inactive-players .player:hover,
-#inactive-players .player a:hover
+#inactive-players .player:hover
   @include border-color(#666)
   background-color: #e5ffe5
   color: #000
+  cursor: pointer
+
+#player-profile .disabled
+
 
 @media only screen and (min-width: 480px)
   #active-players,

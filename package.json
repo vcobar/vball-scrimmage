@@ -1,34 +1,18 @@
 {
   "name": "vball-scrimmage",
-  "version": "1.0.0",
-  "description": "Manage weekly scrimmage games with friends.  The stack will be React, SASS, ES6 for frontend, and Rails in the backend with sqlite3.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.6.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vcobar/vball-scrimmage.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vcobar/vball-scrimmage/issues"
-  },
-  "homepage": "https://github.com/vcobar/vball-scrimmage#readme",
   "dependencies": {
-    "babelify": "^7.3.0",
-    "browserfy": "^1.0.0",
-    "browserify": "^13.1.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-react": "^3.1.0",
-    "gulp-util": "^3.0.7",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-icons": "^2.2.1",
-    "reactify": "^1.1.1",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"
+    "react-dom": "^15.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

@@ -1,5 +1,5 @@
 # vball-scrimmage
-Manage weekly scrimmage games with friends.  The stack will be React, SASS, ES6.  With this iteration, it will be assumed there is no data persistence.  
+Manage weekly scrimmage games with friends.  The stack will be React, SASS, ES6.  With this iteration, it will be assumed there is no data persistence when the page is refreshed.
 
 ### Constraints
 Active players: 8 <= players <= 12
@@ -15,3 +15,9 @@ requires [npm](https://nodejs.org/en/download/)
 ```
 npm install
 ```
+
+### Run the Applicatoin
+```
+npm start
+```
+http://localhost:8080
