@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlayerList from '../containers/PlayerList';
+import PlayerProfile from '../containers/PlayerProfile';
 
 export default class App extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class App extends Component {
           <div id="active-players">
             <PlayerList />
           </div>
+          <PlayerProfile />
         </div>
       );
   }
