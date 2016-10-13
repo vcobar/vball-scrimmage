@@ -1,12 +1,9 @@
 @import "bourbon/bourbon"
 
-#active-players,
-#inactive-players
+#player-list
   @include size(210px auto)
   @include column-count(2)
   @include column-width(90px)
-
-.playerList
   height: 400px
 
 .player
@@ -34,17 +31,14 @@
   color: #000
   cursor: pointer
 
-#player-profile .disabled
-
+#player-profile
 
 @media only screen and (min-width: 480px)
-  #active-players,
-  #inactive-players
+  #player-list
     @include size(330px auto)
     @include column-count(3)
 
 @media only screen and (min-width: 768px)
-  #active-players,
-  #inactive-players
+  #player-list
     @include size(460px auto)
     @include column-count(4)

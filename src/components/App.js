@@ -6,8 +6,8 @@ export default class App extends Component {
   render() {
       return (
         <div>
-          <h3>Players</h3>
-          <div id="active-players">
+          <h3>Bump Set Spike!</h3>
+          <div id="player-list">
             <PlayerList />
           </div>
           <PlayerProfile />

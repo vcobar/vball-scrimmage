@@ -22,6 +22,16 @@ npm start
 ```
 http://localhost:8080
 
+### Create styles
+```
+sass --watch css/styles.sass:public/css/styles.css
+```
+
+### Build Production App
+```
+npm run build
+```
+
 ### Deploy to Heroku
  ```
  git push heroku master
