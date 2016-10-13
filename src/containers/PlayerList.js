@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 // we make containers when we want to have a component to touch the redux state directly
 class PlayerList extends Component {
   renderList() {
-
     return this.props.players.map( (player) => {
       let activeStatus = (player.isActive) ? ' active' : ' inActive';
       return (

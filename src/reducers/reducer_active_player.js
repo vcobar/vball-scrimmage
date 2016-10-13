@@ -6,6 +6,9 @@ export default function(state = null, action) {
   switch(action.type) {
     case 'PLAYER_SELECTED':
       return action.payload;
+    case 'PLAYER_CLOSED':
+      return action.payload;
+      default:
   }
 
   return state;
