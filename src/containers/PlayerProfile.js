@@ -6,15 +6,21 @@ import { bindActionCreators } from 'redux';
 class PlayerProfile extends Component {
   render() {
     if(!this.props.player) {
-      return <div className="PlayerProfile" />
+      return <div className="PlayerProfile hide" />
     }
 
     return (
-      <div className="PlayerProfile">
-        <h3>Profile for:</h3>
-        <div>Name: {this.props.player.name}</div>
-        <div>Playing? {this.props.player.isActive ? 'Yes' : 'No'}</div>
-        <button onClick={ () => this.props.closePlayer(this.props.player) }>Close</button>
+      <div className="PlayerProfile show">
+          <div id="PlayerProfileTop">
+            Profile
+          </div>
+          <div id="PlayerProfileMiddle">
+          <div className="title">Name: </div><div className="content">{this.props.player.name}</div>
+          <div className="title">Playing? </div><div className="content">{this.props.player.isActive ? 'Yes' : 'No'}</div>
+        </div>
+        <div id="PlayerProfileBottom">
+          <div id="buttonClose" onClick={ () => this.props.closePlayer(this.props.player) }>Close</div>
+        </div>
       </div>
     );
   }
