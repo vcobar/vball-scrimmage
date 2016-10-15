@@ -64,7 +64,7 @@
 // slider styles
 .switch
   @include position(relative, null)
-  @include size(38px 20px)
+  @include size(40px 22px)
   display: inline-block
 
 .switch input
@@ -72,13 +72,13 @@
 
 .slider
   @include position(absolute, 0)
-  @include background(#ccc)
+  @include background(#B6B9B6)
   @include transition(all .4s)
   cursor: pointer
 
 .slider:before
-  @include position(absolute, 2px 4px null 4px)
-  @include size(15px 15px)
+  @include position(absolute, 2px 4px null 2px)
+  @include size(15px)
   @include background(#fff)
   @include transition(all .4s)
   content: ""
@@ -88,24 +88,33 @@
   @include border-right-radius(5px)
   @include border-bottom-radius(5px)
   @include border-left-radius(5px)
+  @include border-color(#666)
+  @include border-style(solid)
+  @include border-width(thin)
 
 .slider.round:before
+  @include button(simple, #e5e5e5)
   @include border-top-radius(5px)
   @include border-right-radius(5px)
   @include border-bottom-radius(5px)
   @include border-left-radius(5px)
+  @include border-color(#666)
+  @include border-style(solid)
+  @include border-width(thin)
+  @include padding(0)
+
 
 input:checked + .slider
-  @include background(#45C13E)
+  @include background(#E0FFE0)
 
 input:focus + .slider
-  box-shadow: 0 0 1px #45C13E
+  box-shadow: 0 0 1px #E0FFE0
 
 input:checked + .slider:before
-  @include transform(translateX(15px))
+  @include transform(translateX(17px))
 
 input:focus + .slider
-  box-shadow: 0 0 1px #45C13E
+  box-shadow: 0 0 1px #E0FFE0
 
 .PlayerProfile.show #player-profile-top
   font-size: 16px

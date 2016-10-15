@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { selectPlayer } from '../actions/index';
+import { toggleActive } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 // we make containers when we want to have a component to touch the redux state directly
@@ -41,7 +42,7 @@ function mapDispatchToProps(dispatch) {
   // Whenever selectPlayer is called
   // the result should be passed to all our reducers, thru dispatch function
   // To take from actions to flow thru reducers
-  return bindActionCreators({ selectPlayer: selectPlayer }, dispatch);
+  return bindActionCreators({ selectPlayer: selectPlayer, toggleActive: toggleActive  }, dispatch);
 }
 
 // Promote PlayerList from a component to a container
