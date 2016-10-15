@@ -8,6 +8,8 @@ export default function(state = null, action) {
       return action.payload;
     case 'PLAYER_CLOSED':
       return action.payload;
+    case 'ACTIVE_TOGGLED':
+      return action.payload;
       default:
   }
 

@@ -1,10 +1,12 @@
 @import "bourbon/bourbon"
 
+#players-container
+  @include size(400px auto)
+
 #player-list
   @include size(210px auto)
   @include column-count(2)
-  @include column-width(90px)
-  height: 400px
+  @include size(200px auto)
 
 .player
   @include border-color(lightblue)
@@ -18,7 +20,7 @@
 
 .player.active:hover
   @include border-color(#c4eebb)
-  background-color: #E3F8DF
+  @include border-color(#E3F8DF)
   cursor: pointer
 
 .player.inActive
@@ -27,55 +29,104 @@
 
 .player.inActive:hover
   @include border-color(#666)
-  background-color: #e5ffe5
+  @include background(#e5ffe5)
   color: #000
   cursor: pointer
 
 .PlayerProfile
-  position: absolute
-  top: 50px
-  left: 75px
-  background-color: #fff
+  @include size(185px 150px)
+  @include position(absolute, 75px null null 10px)
+  @include background(#fff)
+
+.PlayerProfile.hide
+  @include position(absolute, -2000px null null 10px)
 
 .PlayerProfile.show
-  width: 300px
-  height: 185px
   @include border-color(black)
   @include border-style(solid)
+  @include border-width(thin)
+
+.PlayerProfile.show .title,
+.PlayerProfile.show .content
+  @include padding(5px)
+  @include border-color(#777)
+  @include border-style(solid null null null)
+  @include border-width(thin)
 
 .PlayerProfile.show .title
   float: left
-  width: 45%
   text-align: right
-  @include padding(5px)
+  @include size(40% auto)
 
 .PlayerProfile.show .content
   text-align: left
-  @include padding(5px)
-  width: 45%
-  text-align: left
-  display: inline-flex
 
-.PlayerProfile.show #PlayerProfileTop
+// slider styles
+.switch
+  @include position(relative, null)
+  @include size(38px 20px)
+  display: inline-block
+
+.switch input
+  display: none
+
+.slider
+  @include position(absolute, 0)
+  @include background(#ccc)
+  @include transition(all .4s)
+  cursor: pointer
+
+.slider:before
+  @include position(absolute, 2px 4px null 4px)
+  @include size(15px 15px)
+  @include background(#fff)
+  @include transition(all .4s)
+  content: ""
+
+.slider.round
+  @include border-top-radius(5px)
+  @include border-right-radius(5px)
+  @include border-bottom-radius(5px)
+  @include border-left-radius(5px)
+
+.slider.round:before
+  @include border-top-radius(5px)
+  @include border-right-radius(5px)
+  @include border-bottom-radius(5px)
+  @include border-left-radius(5px)
+
+input:checked + .slider
+  @include background(#45C13E)
+
+input:focus + .slider
+  box-shadow: 0 0 1px #45C13E
+
+input:checked + .slider:before
+  @include transform(translateX(15px))
+
+input:focus + .slider
+  box-shadow: 0 0 1px #45C13E
+
+.PlayerProfile.show #player-profile-top
   font-size: 16px
   font-weight: bold
   text-align: center
-  background-color: #999
-  @include padding(10px)
   color: #fff
+  @include background(#999)
+  @include padding(5px null null null)
+  @include size(auto 25px)
 
-.PlayerProfile.show #PlayerProfileMiddle
-  @include padding(20px null null null)
+.PlayerProfile.show #player-profile-middle
 
-.PlayerProfile.show #PlayerProfileBottom
-  @include padding(30px null null null)
+.PlayerProfile.show #player-profile-bottom
+  text-align: center
+  @include padding(10px null null null)
 
 .PlayerProfile.show #buttonClose
-  background-color: #971C1C
   text-align: center
-  color: #fff
-  @include font-feature-settings("liga")
-  @include padding(12px 12px 7px)
+  @include button(simple, #BA0000)
+  @include size(100px auto)
+  @include margin(0 auto)
 
 .PlayerProfile.show #buttonClose:hover
   cursor: pointer
@@ -84,8 +135,11 @@
   #player-list
     @include size(330px auto)
     @include column-count(3)
+  .PlayerProfile
+    @include size(50% auto)
 
 @media only screen and (min-width: 768px)
   #player-list
     @include size(460px auto)
     @include column-count(4)
+    // @include column-width(90px)
