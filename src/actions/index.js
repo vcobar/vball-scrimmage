@@ -14,3 +14,10 @@ export function closePlayer(player) {
     payload: null
   };
 }
+export function toggleActive(player) {
+  player.isActive = !player.isActive;
+  return {
+    type: 'ACTIVE_TOGGLED',
+    payload: player
+  }
+}
