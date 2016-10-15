@@ -37,6 +37,58 @@
   color: #000;
   cursor: pointer; }
 
+.PlayerProfile {
+  position: absolute;
+  top: 50px;
+  left: 75px;
+  background-color: #fff; }
+
+.PlayerProfile.show {
+  width: 300px;
+  height: 185px;
+  border-color: black;
+  border-style: solid; }
+
+.PlayerProfile.show .title {
+  float: left;
+  width: 45%;
+  text-align: right;
+  padding: 5px; }
+
+.PlayerProfile.show .content {
+  text-align: left;
+  padding: 5px;
+  width: 45%;
+  text-align: left;
+  display: inline-flex; }
+
+.PlayerProfile.show #PlayerProfileTop {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #999;
+  padding: 10px;
+  color: #fff; }
+
+.PlayerProfile.show #PlayerProfileMiddle {
+  padding-top: 20px; }
+
+.PlayerProfile.show #PlayerProfileBottom {
+  padding-top: 30px; }
+
+.PlayerProfile.show #buttonClose {
+  background-color: #971C1C;
+  text-align: center;
+  color: #fff;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  padding: 12px 12px 7px; }
+
+.PlayerProfile.show #buttonClose:hover {
+  cursor: pointer; }
+
 @media only screen and (min-width: 480px) {
   #player-list {
     height: auto;
