@@ -142,13 +142,9 @@ input:focus + .slider
 
 @media only screen and (min-width: 480px)
   #player-list
-    @include size(330px auto)
-    @include column-count(3)
-  .PlayerProfile
-    @include size(50% auto)
-
-@media only screen and (min-width: 768px)
-  #player-list
-    @include size(460px auto)
+    @include size(400px auto)
     @include column-count(4)
-    // @include column-width(90px)
+  .PlayerProfile
+    @include size(390px 150px)
+  .PlayerProfile.show .title
+    @include size(50% auto)

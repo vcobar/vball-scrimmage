@@ -257,20 +257,17 @@ input:focus + .slider {
 @media only screen and (min-width: 480px) {
   #player-list {
     height: auto;
-    width: 330px;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3; }
-
-  .PlayerProfile {
-    height: auto;
-    width: 50%; } }
-@media only screen and (min-width: 768px) {
-  #player-list {
-    height: auto;
-    width: 460px;
+    width: 400px;
     -webkit-column-count: 4;
     -moz-column-count: 4;
-    column-count: 4; } }
+    column-count: 4; }
+
+  .PlayerProfile {
+    height: 150px;
+    width: 390px; }
+
+  .PlayerProfile.show .title {
+    height: auto;
+    width: 50%; } }
 
 /*# sourceMappingURL=styles.css.map */
